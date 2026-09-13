@@ -1,0 +1,23 @@
+PODS:
+  - Alamofire (5.10.2)
+  - DebugCenter (1.2.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.10.2)
+  - DebugCenter (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+
+EXTERNAL SOURCES:
+  DebugCenter:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Alamofire: 7193b3b92c74a07f85569e1a6c4f4237291e7496
+  DebugCenter: a20db80d17a7452e5b25c3409fb5bc1bb4229ece
+
+PODFILE CHECKSUM: 812ad1d378eca84f138e28e7bb5bae1b6868efc9
+
+COCOAPODS: 1.16.2
