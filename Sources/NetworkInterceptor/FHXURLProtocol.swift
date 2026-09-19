@@ -475,6 +475,19 @@ extension FHXURLProtocol: URLSessionDataDelegate {
         didReceive data: Data
     ) {
 
+        // MARK: 转发响应数据
+        //
+        // 必须先把数据交还给真正的调用方，
+        // 否则 URLSession.shared 收到的 body 永远是空的，
+        // 这里只保存到 responseData 会导致业务拿不到数据。
+
+        client?.urlProtocol(
+            self,
+            didLoad: data
+        )
+
+        // MARK: 保存数据用于日志展示
+
         responseData.append(data)
 
     }

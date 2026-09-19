@@ -17,8 +17,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        LoginModel.default.unarchive()
+        ConfigMessage.default.chooseMessage(.DebugNetwork)
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let viewController = ViewController()
+        let viewController = LoginViewController()
         let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         self.window = window
